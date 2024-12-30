@@ -154,8 +154,8 @@ public:
         auto iterBegin = stock.begin();
         auto iterEnd = stock.end();
         while(iterBegin != iterEnd)
-        {
-            cout << "- " << iterBegin->first << " 재고 : " << iterBegin->second << endl;
+        {            
+            cout << " - " << iterBegin->first << " 재고 : " << iterBegin->second << " / " << 3 << endl;
             ++iterBegin;
         }
     }
@@ -171,7 +171,7 @@ int main() {
         cout << "\n도서관 관리 프로그램" << endl;
         cout << "1. 책 추가" << endl; // 책 정보를 입력받아 책 목록에 추가
         cout << "2. 모든 책 출력" << endl; // 현재 책 목록에 있는 모든 책 출력
-        cout << "3. 모든 재고 출력" << endl; // 현재 책 재고 목록에 있는 모든 책과 해당 책의 재고 출력
+        cout << "3. 모든 재고 및 대여 여부 출력" << endl; // 현재 책 재고 목록에 있는 모든 책과 해당 책의 재고 출력
         cout << "4. 제목으로 책 대여하기" << endl; // 현재 책 재고 목록에 있는 책 중 일치하는 제목의 책 대여하기
         cout << "5. 저자 이름으로 책 대여하기" << endl; // 현재 책 재고 목록에 있는 책 중 일치하는 저자의 책 대여하기
         cout << "6. 빌린 책 반납하기" << endl; // 빌린 책의 제목과 일치하는 책 반납하기
@@ -270,7 +270,7 @@ int main() {
             manager.getBookByAuthor(author);
         }
         else if (choice == 0) {
-            // 3번 선택: 종료
+            // 0번 선택: 종료
             // 프로그램을 종료하고 사용자에게 메시지를 출력합니다.
             cout << "프로그램을 종료합니다." << endl;
             break; // while 루프 종료
